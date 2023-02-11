@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forget_page"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fptvtopcolor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="@color/cardview_shadow_start_color"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fptvforgetpassword"
+        android:text="Forget Password "
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="120sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fptventeremail"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="40sp"
+        android:text="Enter your Registered Email"
+        android:textSize="18sp"
+        />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fpetenteremail"
+    android:textSize="20sp"
+    android:layout_margin="20sp"
+    android:inputType="textEmailAddress"
+    />
+
+    <Button
+        android:id="@+id/fpbtngetotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get otp"
+        android:layout_margin="10sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
