@@ -5,19 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registeration_page">
+    tools:context=".registeration_page"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
-
 
 
     <TextView
@@ -148,35 +147,30 @@
         android:layout_below="@+id/rpetcnfpassword"
         />
 
-        <RadioButton
-            android:id="@+id/rprbmale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textSize="20sp"
-            android:layout_marginStart="27sp"
-            android:layout_below="@id/rptvgender"
-            />
-    <RadioButton
-        android:id="@+id/rprbfemale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Female"
-        android:textSize="20sp"
-        android:layout_marginStart="27sp"
-        android:layout_below="@+id/rptvgender"
-       android:layout_toRightOf="@+id/rprbmale"
-        />
-    <RadioButton
-        android:id="@+id/rprbother"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Other"
-        android:textSize="20sp"
-        android:layout_marginStart="27sp"
-        android:layout_below="@+id/rptvgender"
-        android:layout_toRightOf="@+id/rprbfemale"
-        />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rprg">
+            <RadioButton
+                android:id="@+id/rprbmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                />
+            <RadioButton
+                android:id="@+id/rprbfemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                />
+            <RadioButton
+                android:id="@+id/rprbother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="other"
+                />
+            </RadioGroup>
+
     <Button
         android:id="@+id/rpbtnregister"
         android:layout_width="wrap_content"
@@ -186,9 +180,6 @@
         android:layout_marginBottom="25sp"
         />
 
-
-
-
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
-</LinearLayout>
+    </LinearLayout>

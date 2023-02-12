@@ -36,14 +36,24 @@ class MainActivity : AppCompatActivity() {
 
         btnlogin.setOnClickListener {
             if(etemail.text.toString().trim().isEmpty()){
-                etemail.error = "Enter your Email Address"
+
+                    etemail.error = "Enter your Email Address"
             }
-            else if (etpassword.text.toString().trim().isEmpty()){
+
+            else if (etpassword.text.toString().isEmpty()){
                 etpassword.error = "Enter your Password"
             }
+            else if (etpassword.text.toString().length<6){
+                etpassword.error = "Password contain atleast 6 digit"
+            }
             else{
-                Toast.makeText(this, "Login Successfuly", Toast.LENGTH_SHORT).show()
-
+                if(etemail.text.toString().contains("@gmail.com")) {
+                    startActivity(Intent(this, welcome::class.java))
+                    Toast.makeText(this, "Login Successfuly", Toast.LENGTH_LONG).show()
+                }
+                else{
+                    etemail.error = "Email must contain '@gmail.com'"
+                }
             }
 
         }
